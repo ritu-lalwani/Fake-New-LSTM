@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <title>The Movie Review</title>
+    <base href="">
+    <meta charset="utf-8">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link type="text/css" href="{%static 'styles.css' %}" rel="stylesheet">
+    <link href="{%static 'nivo-slider.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body id="page2">
+<div class="main-texture">
+  <div class="tail">
+    <!--==============================header=================================-->
+        <header>
+            <div class="header">
+                <div class="main">
+                    <a class="logo" href="index.html">Top Rated Movies</a>
+                </div>
+            </div>
+        </header>
+        <div class="bg">
+
+      <!--==============================content================================-->
+     <section id="content">
+                <div class="container_24">
+                	<div class="wrapper indent-bot3" >
+                        {% for movie in MovieDetails %}
+                    	<article class="grid_12">
+                                <div class="block">
+                                    <center>
+                                        <a href="https://www.imdb.com{{movie.link}}" target="_blank">
+                                            <img src={{ movie.images}} alt="#" width="100px"/>
+                                        </a>
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td>
+                                                    Movie Title
+                                                </td>
+                                                <td>
+                                                    {{ movie.movie_title}}({{movie.year}})
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Rating
+                                                </td>
+                                                <td>
+                                                    {{ movie.rating}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Total Reviews
+                                                </td>
+                                                <td>
+                                                    {{ movie.vote}}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </center>
+                                </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--==============================footer=================================-->
+<footer> The Movie Review &copy; 2020 &nbsp;|&nbsp;
+</footer>
+<script src="js/superfish.js"></script>
+</body>
+</html>

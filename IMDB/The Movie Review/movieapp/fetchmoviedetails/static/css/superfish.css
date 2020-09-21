@@ -1,0 +1,16 @@
+.sf-menu{text-transform:capitalize;font-size:0;line-height:0;letter-spacing:-1px;}
+.sf-menu ul{position:absolute;top:-999em;min-width:146px;background:url(../images/submenu.png) 0 0 repeat;padding:13px 0px 11px 42px;left:0;display:none;border:1px solid #333532;}
+.sf-menu li{float:left;position:relative;background:url(../images/menu-pic.png) 100% 0 repeat-y;width:163px;text-align:center;padding:2px 2px 2px 1px;}
+.sf-menu li:first-child{width:156px;padding:2px 2px 2px 2px;}
+.sf-menu a{color:#eee;text-decoration:none;display:block;font-size:18px;line-height:1.2em;padding:9px 0px 10px;}
+.sf-menu li:hover ul,.sf-menu li.sfHover ul{top:44px;z-index:99;}
+.sf-menu li:hover li ul,ul.sf-menu li.sfHover li ul{top:-999em}
+.sf-menu li li:hover ul,ul.sf-menu li li.sfHover ul{left:-234px;top:-14px;}
+.sf-menu li.current a,.sf-menu li.sfHover a,.sf-menu li a:hover{color:#fff;background:url(../images/menu-active.gif) 0 0 repeat;}
+.sf-menu li li a{padding:1px 0px;font-weight:normal;background:none !important;display:inline-block;}
+.sf-menu li.current li a,.sf-menu li li a,.sf-menu li.sfHover li a{color:#eee;}
+.sf-menu li li.current a,.sf-menu li li a:hover,.sf-menu li li.sfHover a{color:#658c17;}
+.sf-menu li li.current li a,.sf-menu li li li a,.sf-menu li li.sfHover li a{color:#eee;}
+.sf-menu li li li.current a,.sf-menu li li li a:hover{color:#658c17;}
+.sf-menu li li{float:none;margin:0px;width:100% !important;text-align:left;background:none;padding:0 !important;}
+.sf-menu li a:hover{text-decoration:none}
